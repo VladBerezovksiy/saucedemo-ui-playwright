@@ -1,3 +1,10 @@
+import dotenv from 'dotenv';
+import path from 'path';
+
+if (!process.env.CI) {
+    dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+}
+
 export const credentials = {
     username: process.env.USERNAME,
     password: process.env.PASSWORD
