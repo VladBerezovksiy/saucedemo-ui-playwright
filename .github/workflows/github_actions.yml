@@ -10,6 +10,13 @@ jobs:
   test:
     timeout-minutes: 30
     runs-on: ubuntu-latest
+    env:
+      URLS_BASE: ${{ secrets.URLS_BASE }}
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      FIRST_NAME: ${{ secrets.FIRST_NAME }}
+      LAST_NAME: ${{ secrets.LAST_NAME }}
+      POSTAL_CODE: ${{ secrets.POSTAL_CODE }}
 
     steps:
       - name: Checkout repository
