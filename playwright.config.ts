@@ -1,7 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
 
-console.log('Playwright baseURL:', process.env.URLS_BASE);
-
 export default defineConfig({
   testDir: './src/tests',
   /* Run tests in files in parallel */
