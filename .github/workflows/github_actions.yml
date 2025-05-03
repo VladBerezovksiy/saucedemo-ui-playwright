@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 30
     runs-on: ubuntu-latest
     env:
-      URLS_BASE: ${{ secrets.URLS_BASE }}
+      URLS_BASE: "https://www.saucedemo.com"
       USERNAME: ${{ secrets.USERNAME }}
       PASSWORD: ${{ secrets.PASSWORD }}
       FIRST_NAME: ${{ secrets.FIRST_NAME }}
