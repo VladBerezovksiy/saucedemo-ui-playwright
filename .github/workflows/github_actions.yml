@@ -1,4 +1,4 @@
-name: Run Playwright Tests
+name: Run SauceDemo Tests
 
 on:
   push:
@@ -7,16 +7,16 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  e2e-tests:
     timeout-minutes: 30
     runs-on: ubuntu-latest
     env:
-      URLS_BASE: ${{ secrets.URLS_BASE }}
-      USERNAME: ${{ secrets.USERNAME }}
-      PASSWORD: ${{ secrets.PASSWORD }}
-      FIRST_NAME: ${{ secrets.FIRST_NAME }}
-      LAST_NAME: ${{ secrets.LAST_NAME }}
-      POSTAL_CODE: ${{ secrets.POSTAL_CODE }}
+      URLS_BASE: ${{ vars.URLS_BASE }}
+      USERNAME: ${{ vars.USERNAME }}
+      PASSWORD: ${{ vars.PASSWORD }}
+      FIRST_NAME: ${{ vars.FIRST_NAME }}
+      LAST_NAME: ${{ vars.LAST_NAME }}
+      POSTAL_CODE: ${{ vars.POSTAL_CODE }}
 
     steps:
       - name: Checkout repository
