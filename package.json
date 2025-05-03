@@ -1,0 +1,23 @@
+{
+  "name": "saucedemo-ui-playwright",
+  "author": "Vladyslav Berezovskyi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "pw:open-ui": "playwright test --ui",
+    "pw:run-chromium": "playwright test --project=chromium",
+    "pw:run-firefox": "playwright test --project=firefox",
+    "pw:debug-chromium": "playwright test --debug --project=chromium",
+    "pw:debug-firefox": "playwright test --debug --project=firefox",
+    "pw:open-report": "playwright show-report",
+    "pw:clean-report": "rm -rf playwright-report && rm -rf test-results"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.7.0",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "dotenv": "^16.5.0",
+    "typescript": "^5.8.3"
+  }
+}
